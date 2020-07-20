@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Николай Жданов](https://up.htmlacademy.ru/adaptive/20/user/1546623).
-* Наставник: `Максим Прусаков`.
+* Наставник: `Максим Прусаков`(https://htmlacademy.ru/profile/hikikomori).
 
 ---
 
