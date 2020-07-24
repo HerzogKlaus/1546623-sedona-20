@@ -12,18 +12,10 @@
       </button>
       <nav class="header__menu header__menu--opened">
         <ul class="menu__links">
-          <a href="">
-            <li class="menu__link menu__link--active">Главная</li>
-          </a>
-          <a href="#">
-            <li class="menu__link">Фото и видео</li>
-          </a>
-          <a href="#">
-            <li class="menu__link">Форма отзыва</li>
-          </a>
-          <a href="#">
-            <li class="menu__link">html academy</li>
-          </a>
+          <li class="menu__link menu__link--active"><a href="">Главная</a></li>
+          <li class="menu__link"><a href="#">Фото и видео</a></li>
+          <li class="menu__link"><a href="#">Форма отзыва</a></li>
+          <li class="menu__link"><a href="#">html academy</a></li>
         </ul>
       </nav>
       <div class="header__wrapper">
@@ -42,7 +34,7 @@
         <h1 class="photos__title">
           Фото и видео
         </h1>
-        <p class="photos_desc">
+        <p class="photos__desc">
           Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
         </p>
       </div>
@@ -52,8 +44,8 @@
             <img src="https://via.placeholder.com/150x150" alt="photo" class="photo__image">
           </a>
           <div class="photo__desc">
-            <span class="photo__title">Неродные просторы</span>
-            <span class="photo__author">Автор фото: Борис</span>
+            <p class="photo__title">Неродные просторы</p>
+            <p class="photo__author">Автор фото: Борис</p>
             <div class="photo__likes">
               <img src="https://via.placeholder.com/150x150" alt="like icon" class="photo__like-icon">
               <span class="photo__likes-quantity">
@@ -67,8 +59,8 @@
             <img src="https://via.placeholder.com/150x150" alt="photo" class="photo__image">
           </a>
           <div class="photo__desc">
-            <span class="photo__title">Местная растительность</span>
-            <span class="photo__author">Автор фото: Сергей</span>
+            <p class="photo__title">Местная растительность</p>
+            <p class="photo__author">Автор фото: Сергей</p>
             <div class="photo__likes">
               <img src="https://via.placeholder.com/150x150" alt="like icon" class="photo__like-icon">
               <span class="photo__likes-quantity">
@@ -82,8 +74,8 @@
             <img src="https://via.placeholder.com/150x150" alt="photo" class="photo__image">
           </a>
           <div class="photo__desc">
-            <span class="photo__title">Дорога на север</span>
-            <span class="photo__author">Автор фото: Петр</span>
+            <p class="photo__title">Дорога на север</p>
+            <p class="photo__author">Автор фото: Петр</p>
             <div class="photo__likes">
               <img src="https://via.placeholder.com/150x150" alt="like icon" class="photo__like-icon">
               <span class="photo__likes-quantity">
@@ -97,8 +89,8 @@
             <img src="https://via.placeholder.com/150x150" alt="photo" class="photo__image">
           </a>
           <div class="photo__desc">
-            <span class="photo__title">Мост дьявола</span>
-            <span class="photo__author">Автор фото: Антон</span>
+            <p class="photo__title">Мост дьявола</p>
+            <p class="photo__author">Автор фото: Антон</p>
             <div class="photo__likes">
               <img src="https://via.placeholder.com/150x150" alt="like icon" class="photo__like-icon">
               <span class="photo__likes-quantity">
@@ -110,11 +102,13 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="footer__hashtag">#visitsedona</div>
+      <p class="footer__hashtag">#visitsedona</p>
       <div class="footer__social-links">
-        <a class="social-links__item" href="#">Twitter</a>
-        <a class="social-links__item" href="#">Facebook</a>
-        <a class="social-links__item" href="#">Youtube</a>
+        <ul>
+          <li><a class="social-links__item" href="#">Twitter</a></li>
+          <li><a class="social-links__item" href="#">Facebook</a></li>
+          <li><a class="social-links__item" href="#">Youtube</a></li>
+        </ul>
       </div>
       <div class="footer__copyright">
         <span class="copyright__title">
