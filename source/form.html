@@ -29,6 +29,97 @@
         <img src="https://via.placeholder.com/150x150" alt="Sedona">
       </div>
     </header>
+    <section class="form">
+      <div class="form__header">
+        <h2 class="form__title">
+          Оставьте свой отзыв
+        </h2>
+        <p class="form__desc">
+          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        </p>
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <div class="form-fieldsets">
+            <div class="form-fieldsets__item">
+              <div class="form__legend">Представьтесь:</div>
+              <div class="form__line">
+                <label for="name">Имя</label>
+                <input class="form__meet" type="text" placeholder="Петр" required>
+              </div>
+              <div class="form__line">
+                <label for="surname">Фамилия</label>
+                <input class="form__meet" type="text" placeholder="Иванов" required>
+              </div>
+              <div class="form__line">
+                <label for="middlename">Отчество</label>
+                <input class="form__meet" type="text" placeholder="Александрович" required>
+              </div>
+            </div>
+            <div class="form-fieldsets__item">
+              <div class="form__legend">
+                Контактная ифнормация
+              </div>
+              <div class="form__line">
+                <label for="phone">Контактный телефон</label>
+                <input class="form__contact" type="text" placeholder="Введите телефон" required>
+              </div>
+              <div class="form__line">
+                <label for="e-mail">Электронная почта</label>
+                <input class="form__contact" type="email" placeholder="Введите e-mail" required>
+              </div>
+            </div>
+            <div class="form-fieldsets__item">
+              <div class="form__legend">
+                Ваше общее впечатление
+              </div>
+              <div class="form__line">
+                <input class="form__impression" type="radio" checked>
+                <label for="positive">Скорее положительное</label>
+              </div>
+              <div class="form__line">
+                <input class="form__impression" type="radio" checked>
+                <label for="negative">Скорее отрицательное</label>
+              </div>
+              <div class="form__line">
+                <input class="form__impression" type="radio" checked>
+                <label for="neutral">Затрудняюсь ответить</label>
+              </div>
+            </div>
+            <div class="form-fieldset__item">
+              <div class="form__legend">
+                Посещенные достопримечательности
+              </div>
+              <div class="form__line">
+                <input class="form_atraction" type="checkbox" checked>
+                <label for="attr1">Мост Дьявола</label>
+              </div>
+              <div class="form__line">
+                <input class="form_atraction" type="checkbox" checked>
+                <label for="attr2">Гора-Колокол</label>
+              </div>
+              <div class="form__line">
+                <input class="form_atraction" type="checkbox" checked>
+                <label for="attr3">Слайд-Парк</label>
+              </div>
+              <div class="form__line">
+                <input class="form_atraction" type="checkbox">
+                <label for="attr4">Красные скалы</label>
+              </div>
+            </div>
+            <div class="form-fieldset__item">
+              <div class="form__legend">
+                Опишите свои эмоции
+              </div>
+              <div class="form__line">
+                <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+              </div>
+            </div>
+            <div class="form-submit">
+              <input class="form-submit__button" type="submit" value="Отправить отзыв">
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
     <footer class="footer">
       <p class="footer__hashtag">#visitsedona</p>
       <div class="footer__social-links">
