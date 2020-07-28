@@ -37,21 +37,21 @@
         <p class="form__desc">
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
-        <form action="https://echo.htmlacademy.ru" method="GET">
+        <form action="https://echo.htmlacademy.ru">
           <div class="form-fieldsets">
             <div class="form-fieldsets__item">
               <div class="form__legend">Представьтесь:</div>
               <div class="form__line">
                 <label for="name">Имя</label>
-                <input class="form__meet" type="text" placeholder="Петр" required>
+                <input class="form__meet" type="text" name="name" placeholder="Петр" required>
               </div>
               <div class="form__line">
                 <label for="surname">Фамилия</label>
-                <input class="form__meet" type="text" placeholder="Иванов" required>
+                <input class="form__meet" type="text" name="surname" placeholder="Иванов" required>
               </div>
               <div class="form__line">
                 <label for="middlename">Отчество</label>
-                <input class="form__meet" type="text" placeholder="Александрович" required>
+                <input class="form__meet" type="text" name="middlename" placeholder="Александрович" required>
               </div>
             </div>
             <div class="form-fieldsets__item">
@@ -60,11 +60,11 @@
               </div>
               <div class="form__line">
                 <label for="phone">Контактный телефон</label>
-                <input class="form__contact" type="text" placeholder="Введите телефон" required>
+                <input class="form__contact" type="text" name="phone" placeholder="Введите телефон" required>
               </div>
               <div class="form__line">
                 <label for="e-mail">Электронная почта</label>
-                <input class="form__contact" type="email" placeholder="Введите e-mail" required>
+                <input class="form__contact" type="email" name="e-mail" placeholder="Введите e-mail" required>
               </div>
             </div>
             <div class="form-fieldsets__item">
@@ -72,15 +72,15 @@
                 Ваше общее впечатление
               </div>
               <div class="form__line">
-                <input class="form__impression" type="radio" checked>
+                <input class="form__impression" type="radio" name="form-radio" checked>
                 <label for="positive">Скорее положительное</label>
               </div>
               <div class="form__line">
-                <input class="form__impression" type="radio" checked>
+                <input class="form__impression" type="radio" name="form-radio">
                 <label for="negative">Скорее отрицательное</label>
               </div>
               <div class="form__line">
-                <input class="form__impression" type="radio" checked>
+                <input class="form__impression" type="radio" name="form-radio">
                 <label for="neutral">Затрудняюсь ответить</label>
               </div>
             </div>
@@ -89,15 +89,15 @@
                 Посещенные достопримечательности
               </div>
               <div class="form__line">
-                <input class="form_atraction" type="checkbox" checked>
+                <input class="form_atraction" type="checkbox" name="form-checkbox" checked>
                 <label for="attr1">Мост Дьявола</label>
               </div>
               <div class="form__line">
-                <input class="form_atraction" type="checkbox" checked>
+                <input class="form_atraction" type="checkbox" name="form-checkbox" checked>
                 <label for="attr2">Гора-Колокол</label>
               </div>
               <div class="form__line">
-                <input class="form_atraction" type="checkbox" checked>
+                <input class="form_atraction" type="checkbox" name="form-checkbox" checked>
                 <label for="attr3">Слайд-Парк</label>
               </div>
               <div class="form__line">
@@ -113,9 +113,7 @@
                 <textarea placeholder="Опишите подробно все свои восторги"></textarea>
               </div>
             </div>
-            <div class="form-submit">
-              <input class="form-submit__button" type="submit" value="Отправить отзыв">
-            </div>
+              <button class="form__submit-button" type="submit" name="form-submit">Отправить отзыв</button>
           </div>
         </form>
       </div>
