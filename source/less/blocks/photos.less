@@ -1,2 +1,53 @@
 @import "../variables.less";
 @import "../mixins.less";
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    text-align: center;
+    font-size: @main-font-size;
+    line-height: @main-line-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  &__desc {
+    width: 67%;
+  }
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 25px;
+  &__title {
+    font-weight: bold;
+  }
+  &:before {
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+  }
+
+  &:after {
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+  }
+
+  &__likes-quantity {
+    margin-left: 14px;
+    font-weight: bold;
+  }
+}
