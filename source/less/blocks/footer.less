@@ -1,44 +1,41 @@
-@import "../variables.less";
-@import "../mixins.less";
-
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  &__hashtag{
-    font-size: 21px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  &__social-links ul{
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-  }
-
-  &__social-links li{
-    width: 46px;
-    height: 48px;
-    background: @main-blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 6px;
-  }
-
-  &__copyright{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    padding-top: 15px;
-    padding-bottom: 26px;
-  }
 }
 
-.copyright__title{
+.copyright__title {
   margin-right: 6px;
+}
+
+.footer__hashtag {
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer__social-links ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.footer__social-links li {
+  width: 46px;
+  height: 48px;
+  background: @main-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 6;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 26px;
 }
