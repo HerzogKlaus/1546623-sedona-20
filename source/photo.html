@@ -4,30 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фото и видео</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
-      <button class="header__burger-menu">
-      </button>
-      <nav class="header__menu header__menu--opened">
+      <span class="header__burger-menu">
+
+      </span>
+      <!--<nav class="header__menu header__menu--opened">
         <ul class="menu__links">
           <li class="menu__link menu__link--active"><a href="">Главная</a></li>
           <li class="menu__link"><a href="#">Фото и видео</a></li>
           <li class="menu__link"><a href="#">Форма отзыва</a></li>
           <li class="menu__link"><a href="#">html academy</a></li>
         </ul>
-      </nav>
+      </nav>-->
       <div class="header__wrapper">
         <div class="header__logo">
           <a href="#" class="header__logo-link">
-            <img src="https://via.placeholder.com/150x150" alt="City Of Sedona">
+            <img src="./img/logo-sedona-mobile.svg" alt="City Of Sedona">
           </a>
         </div>
       </div>
       <div class="header__title">
-        <img src="https://via.placeholder.com/150x150" alt="Sedona">
+        <img src="./img/text-sedona.svg" alt="Sedona">
       </div>
+      <img class="header__triangle" src="./img/bg-intro-triangle-mobile.svg" alt="triangle" />
     </header>
     <section class="photos">
       <div class="photos__header">
@@ -41,13 +44,13 @@
       <div class="photos__block">
         <div class="photo">
           <a class="photo__link" href="#">
-            <img src="https://via.placeholder.com/150x150" alt="photo" class="photo__image">
+            <img src="./img/photo-sunset-mobile@1x.jpg" alt="photo" class="photo__image">
           </a>
           <div class="photo__desc">
             <p class="photo__title">Неродные просторы</p>
             <p class="photo__author">Автор фото: Борис</p>
             <div class="photo__likes">
-              <img src="https://via.placeholder.com/150x150" alt="like icon" class="photo__like-icon">
+              <img src="./img/icon-like.svg" alt="like icon" class="photo__like-icon">
               <span class="photo__likes-quantity">
                 1350
               </span>
@@ -56,13 +59,13 @@
         </div>
         <div class="photo">
           <a class="photo__link" href="#">
-            <img src="https://via.placeholder.com/150x150" alt="photo" class="photo__image">
+            <img src="./img/photo-cactus-mobile@1x.jpg" alt="photo" class="photo__image">
           </a>
           <div class="photo__desc">
             <p class="photo__title">Местная растительность</p>
             <p class="photo__author">Автор фото: Сергей</p>
             <div class="photo__likes">
-              <img src="https://via.placeholder.com/150x150" alt="like icon" class="photo__like-icon">
+              <img src="./img/icon-like.svg" alt="like icon" class="photo__like-icon">
               <span class="photo__likes-quantity">
                 143
               </span>
@@ -71,13 +74,13 @@
         </div>
         <div class="photo">
           <a class="photo__link" href="#">
-            <img src="https://via.placeholder.com/150x150" alt="photo" class="photo__image">
+            <img src="./img/photo-roads-mobile@1x.jpg" alt="photo" class="photo__image">
           </a>
           <div class="photo__desc">
             <p class="photo__title">Дорога на север</p>
             <p class="photo__author">Автор фото: Петр</p>
             <div class="photo__likes">
-              <img src="https://via.placeholder.com/150x150" alt="like icon" class="photo__like-icon">
+              <img src="./img/icon-like.svg" alt="like icon" class="photo__like-icon">
               <span class="photo__likes-quantity">
                 96
               </span>
@@ -86,13 +89,13 @@
         </div>
         <div class="photo">
           <a class="photo__link" href="#">
-            <img src="https://via.placeholder.com/150x150" alt="photo" class="photo__image">
+            <img src="./img/photo-bridge-mobile@1x.jpg" alt="photo" class="photo__image">
           </a>
           <div class="photo__desc">
             <p class="photo__title">Мост дьявола</p>
             <p class="photo__author">Автор фото: Антон</p>
             <div class="photo__likes">
-              <img src="https://via.placeholder.com/150x150" alt="like icon" class="photo__like-icon">
+              <img src="./img/icon-like.svg" alt="like icon" class="photo__like-icon">
               <span class="photo__likes-quantity">
                 254
               </span>
@@ -101,7 +104,7 @@
         </div>
       </div>
     </section>
-    <div class="presenatation">
+    <div class="presentation">
       <h2 class="presentation__title">
         Все еще сомневаетесь?
       </h2>
@@ -111,19 +114,23 @@
     </div>
     <footer class="footer">
       <p class="footer__hashtag">#visitsedona</p>
-      <div class="footer__social-links">
-        <ul>
-          <li><a class="social-links__item" href="#">Twitter</a></li>
-          <li><a class="social-links__item" href="#">Facebook</a></li>
-          <li><a class="social-links__item" href="#">Youtube</a></li>
+      <div class="social-links">
+        <ul class="social-links__list">
+          <li class="social-links__item"><a href="#"><img src="./img/icon-twitter.svg" alt="Twitter"></a></li>
+          <li class="social-links__item"><a href="#"><img src="./img/icon-facebook.svg" alt="Facebook"></a></li>
+          <li class="social-links__item"><a href="#"><img src="./img/icon-youtube.svg" alt="YouTube"></a></li>
         </ul>
       </div>
       <div class="footer__copyright">
-        <span class="copyright__title">
+        <span class="footer__copyright-title">
           Разработано
         </span>
-        <a class="copyright__link" href="#">
-          <img src="https://via.placeholder.com/150x150" alt="htmlacademy" class="copyright_academy-logo">
+        <a class="footer__copyright-link" href="#">
+          <img
+            src="./img/logo-htmlacademy.svg"
+            alt="htmlacademy"
+            class="copyright_academy-logo"
+          />
         </a>
       </div>
     </footer>

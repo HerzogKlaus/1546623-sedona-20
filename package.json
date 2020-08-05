@@ -36,5 +36,9 @@
   ],
   "engines": {
     "node": "12.18.2"
+  },
+  "dependencies": {
+    "bem-validate": "^1.1.2",
+    "normalize.css": "^8.0.1"
   }
 }
