@@ -40,86 +40,86 @@
         <p class="form__desc">
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
+      </div>
         <form action="https://echo.htmlacademy.ru" method="POST">
           <div class="form-fieldsets">
-            <div class="form-fieldsets__item">
+            <div class="form-fieldsets__item form-fieldsets__item--meet">
               <div class="form__legend">Представьтесь:</div>
               <div class="form__line">
-                <label for="name">Имя</label>
+                <label class="form__line-title" for="name">Имя:</label>
                 <input class="form__meet" id="name" type="text" name="name" placeholder="Петр" required>
               </div>
               <div class="form__line">
-                <label for="surname">Фамилия</label>
+                <label class="form__line-title" for="surname">Фамилия:</label>
                 <input class="form__meet" id="surname" type="text" name="surname" placeholder="Иванов" required>
               </div>
               <div class="form__line">
-                <label for="middlename">Отчество</label>
+                <label class="form__line-title" for="middlename">Отчество:</label>
                 <input class="form__meet" id="middlename" type="text" name="middlename" placeholder="Александрович" required>
               </div>
             </div>
-            <div class="form-fieldsets__item">
+            <div class="form-fieldsets__item form-fieldsets__item--contacts">
               <div class="form__legend">
-                Контактная ифнормация
+                Контактная ифнормация:
               </div>
               <div class="form__line">
-                <label for="phone">Контактный телефон</label>
+                <label class="form__line-title" for="phone">Контактный телефон:</label>
                 <input class="form__contact" id="phone" type="text" name="phone" placeholder="Введите телефон" required>
               </div>
               <div class="form__line">
-                <label for="e-mail">Электронная почта</label>
+                <label class="form__line-title" for="e-mail">Электронная почта:</label>
                 <input class="form__contact" id="e-mail" type="email" name="e-mail" placeholder="Введите e-mail" required>
               </div>
             </div>
             <div class="form-fieldsets__item">
               <div class="form__legend">
-                Ваше общее впечатление
+                Ваше общее впечатление:
               </div>
               <div class="form__line">
                 <input class="form__impression" id="positive" type="radio" name="impression" value="positive" checked>
-                <label for="positive">Скорее положительное</label>
+                <label class="form__line-title--toggle" for="positive">Скорее положительное</label>
               </div>
               <div class="form__line">
                 <input class="form__impression" id="negative" type="radio" name="impression" value="negative">
-                <label for="negative">Скорее отрицательное</label>
+                <label class="form__line-title--toggle" for="negative">Скорее отрицательное</label>
               </div>
               <div class="form__line">
                 <input class="form__impression" id="neutral" type="radio" name="impression" value="neutral">
-                <label for="neutral">Затрудняюсь ответить</label>
+                <label class="form__line-title--toggle" for="neutral">Затрудняюсь ответить</label>
               </div>
             </div>
             <div class="form-fieldsets__item">
               <div class="form__legend">
-                Посещенные достопримечательности
+                Посещенные достопримечательности:
               </div>
               <div class="form__line">
                 <input class="form_atraction" id="attr1" type="checkbox" name="atraction" value="Devil-Bridge" checked>
-                <label for="attr1">Мост Дьявола</label>
+                <label class="form__line-title--toggle" for="attr1">Мост Дьявола</label>
               </div>
               <div class="form__line">
                 <input class="form_atraction" id="attr2" type="checkbox" name="atraction" value="Mountain-Bell" checked>
-                <label for="attr2">Гора-Колокол</label>
+                <label class="form__line-title--toggle" for="attr2">Гора-Колокол</label>
               </div>
               <div class="form__line">
                 <input class="form_atraction" id="attr3" type="checkbox" name="atraction" value="Slaid-Park" checked>
-                <label for="attr3">Слайд-Парк</label>
+                <label class="form__line-title--toggle" for="attr3">Слайд-Парк</label>
               </div>
               <div class="form__line">
                 <input class="form_atraction" id="attr4" type="checkbox" name="atraction" value="Red-Rocks">
-                <label for="attr4">Красные скалы</label>
+                <label class="form__line-title--toggle" for="attr4">Красные скалы</label>
               </div>
             </div>
             <div class="form-fieldsets__item">
               <div class="form__legend">
-                Опишите свои эмоции
+                Опишите свои эмоции:
               </div>
               <div class="form__line">
-                <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+                <textarea class="form__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
               </div>
             </div>
               <button class="form__submit-button" type="submit" name="form-submit">Отправить отзыв</button>
           </div>
         </form>
-      </div>
     </section>
     <footer class="footer">
       <p class="footer__hashtag">#visitsedona</p>

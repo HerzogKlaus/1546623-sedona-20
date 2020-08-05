@@ -1,0 +1,106 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #e5e5e5;
+  }
+}
+
+.form__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__desc {
+  text-align: center;
+  text-transform: uppercase;
+  width: 85%;
+  line-height: @main-line-height;
+}
+
+.form-fieldsets__item {
+  &--meet {
+    .form__line {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+
+  &--contacts {
+    .form__line {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.form__legend {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: @main-font-size;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form__line-title {
+  text-align-last: left;
+  text-transform: uppercase;
+
+  &--toggle {
+    font-weight: bold;
+  }
+}
+
+.form__meet {
+  width: 80%;
+  height: 58px;
+  font-weight: bold;
+  background: @inputs-bg;
+  border: 0;
+  outline: 0;
+}
+
+.form__contact {
+  width: 90%;
+  height: 58px;
+  font-weight: bold;
+  background: @inputs-bg;
+  border: 0;
+  outline: 0;
+}
+
+.form__textarea {
+  width: 90%;
+  min-height: 160px;
+  font-weight: bold;
+}
+
+.form__impression:checked {
+  background: @black;
+}
+
+.form__submit-button {
+  background: #81b3d2;
+  color: @white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 17px 32px;
+  font-size: 26px;
+  font-weight: bold;
+  border: 0;
+}
