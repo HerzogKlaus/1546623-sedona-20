@@ -8,13 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &::after {
-    content: "";
-    height: 1px;
-    width: 100%;
-    background: #e5e5e5;
-  }
 }
 
 .form__title {
@@ -30,6 +23,21 @@
 }
 
 .form-fieldsets__item {
+  margin-top: 20px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #e5e5e5;
+    margin-bottom: 16px;
+    top: 0;
+  }
+
   &--meet {
     .form__line {
       display: flex;
@@ -37,13 +45,22 @@
       justify-content: space-between;
       align-items: baseline;
     }
+
+    .form__line-title {
+      padding-right: 30px;
+    }
   }
 
   &--contacts {
     .form__line {
+      position: relative;
       display: flex;
       flex-direction: column;
-      align-items: center;
+    }
+
+    .form__line-title {
+      margin-left: 20px;
+      margin-bottom: 5px;
     }
   }
 
@@ -60,8 +77,27 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      font-weight: bold;
     }
   }
+
+  &--emotion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form__line {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.form__line {
+  padding-top: 20px;
 }
 
 .form__legend {
@@ -93,6 +129,7 @@
       bottom: 1px;
       background-color: @inputs-bg;
       border-radius: 50%;
+      margin-right: 30px;
     }
   }
 
@@ -102,8 +139,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 10px;
-      position: relative;
+      margin-right: 30px;
       left: 0;
       bottom: -12px;
       background-color: #f2f2f2;
@@ -116,7 +152,7 @@
 .form__atraction {
   display: none;
 
-  &:checked + .form__line-title--check:before {
+  &:checked + .form__line-title--check::before {
     content: url("../../img/icon-tick.svg");
     vertical-align: middle;
     text-align: center;
@@ -126,12 +162,13 @@
 .form__impression {
   display: none;
 
-  &:checked + .form__line-title--toggle:before {
+  &:checked + .form__line-title--toggle::before {
     background-color: @black;
     width: 18px;
     height: 18px;
     border-radius: 50%;
     border: 15px solid @inputs-bg;
+    margin-right: 30px;
   }
 }
 
@@ -142,6 +179,7 @@
   background: @inputs-bg;
   border: 0;
   outline: 0;
+  text-indent: 22px;
 }
 
 .form__contact {
@@ -151,16 +189,56 @@
   background: @inputs-bg;
   border: 0;
   outline: 0;
+  text-indent: 22px;
 }
 
 .form__textarea {
-  width: 90%;
+  background: @inputs-bg;
+  text-indent: 22px;
+  padding-top: 13px;
+}
+
+.form__contact-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #e6e6e6;
+  right: 0;
+  bottom: 0;
+
+  &::after {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+  }
+
+  &--phone {
+    &::after {
+      content: url("../../img/icon-phone.svg");
+      position: absolute;
+    }
+  }
+
+  &--email {
+    &::after {
+      content: url("../../img/icon-mail.svg");
+      position: absolute;
+    }
+  }
+}
+
+.form__textarea {
+  width: 100%;
   min-height: 160px;
   font-weight: bold;
+  outline: none;
+  border: none;
 }
 
 .form__submit-button {
   display: flex;
+  width: 90%;
+  justify-content: center;
   background: #81b3d2;
   color: @white;
   text-align: center;
@@ -170,4 +248,5 @@
   font-weight: bold;
   border: 0;
   margin: 0 auto;
+  margin-top: 50px;
 }
