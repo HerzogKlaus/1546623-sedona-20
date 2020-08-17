@@ -8,7 +8,7 @@
 }
 
 .find-hotel__button {
-  background: #81b3d2;
+  background: @main-blue;
   color: @white;
   text-align: center;
   text-transform: uppercase;
@@ -37,55 +37,55 @@
 }
 
 .presentation__progress-bar {
-  position: absolute;
-  top: -45px;
-  left: 0;
-  width: 280px;
-  min-height: 45px;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 45px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    display: block;
-    transform: translate(0, -50%);
   }
 
   &::before {
-    right: 22px;
-    background-color: rgba(255, 255, 255, 0.3);
-    left: 22px;
-    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 235px;
+    height: 3px;
+    top: 28px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
   }
 
   &::after {
-    left: 50px;
     width: 9px;
-    height: 10px;
-    background-color: #ffffff;
+    height: 9px;
+    background: @white;
     border-radius: 50%;
+    position: absolute;
+    bottom: 77px;
+    left: 37px;
   }
 }
 
 .presentation__player {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  min-height: 66px;
-  margin: 0 20px;
-  background-color: #f2f2f2;
-  width: 58.5%;
+  width: 280px;
+  height: 111px;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: -10px;
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 .presentation__player-buttons {
-  position: relative;
-  padding: 0;
+  background: @inputs-bg;
+  width: 100%;
+  height: 66px;
   display: flex;
   justify-content: space-between;
-  min-height: 66px;
-  margin: 0 20px;
+  align-items: center;
+  padding: 0 6%;
+  list-style: none;
 }
 
 .presentation__player-button {

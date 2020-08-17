@@ -1,8 +1,14 @@
 @font-face {
   font-family: @main-font;
   src: local("ptsans"),
-    url("../fonts/ptsans.woff") format("woff"),
-    url("../fonts/ptsans.woff2") format("woff2");
+    url("../fonts/ptsans.woff") format("woff2"),
+    url("../fonts/ptsans.woff2") format("woff"),
+    url("../fonts/ptsansbold.woff") format("woff2"),
+    url("../fonts/ptsansbold.woff2") format("woff");
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -12,13 +18,4 @@ body {
 
 a {
   text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-input:invalid {
-  border: none;
-  outline: none;
 }

@@ -174,7 +174,7 @@
   display: none;
 
   &:checked + .form__line-title--check::before {
-    content: url("../../img/icon-tick.svg");
+    content: url("../img/icon-tick.svg");
     vertical-align: middle;
     text-align: center;
   }
@@ -236,7 +236,7 @@
   }
 
   &:focus {
-    background-color: #ffffff;
+    background-color: @white;
     border: 4px solid #e5e5e5;
   }
 }
@@ -257,14 +257,14 @@
 
   &--phone {
     &::after {
-      content: url("../../img/icon-phone.svg");
+      content: url("./../../img/icon-phone.svg");
       position: absolute;
     }
   }
 
   &--email {
     &::after {
-      content: url("../../img/icon-mail.svg");
+      content: url("./../../img/icon-mail.svg");
       position: absolute;
     }
   }
@@ -288,6 +288,6 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: @main-blue-hover;
   }
 }
