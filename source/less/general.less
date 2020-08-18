@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "PT Sans";
+  src: local("ptsans"),
+    url("../fonts/ptsans.woff") format("woff2"),
+    url("../fonts/ptsans.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("ptsans"),
+    url("../fonts/ptsansbold.woff") format("woff2"),
+    url("../fonts/ptsansbold.woff2") format("woff");
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 480px;
   font-family: @main-font;
@@ -5,8 +24,4 @@ body {
 
 a {
   text-decoration: none;
-}
-
-ul {
-  list-style: none;
 }

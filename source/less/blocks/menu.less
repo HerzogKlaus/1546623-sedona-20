@@ -1,0 +1,50 @@
+.menu {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__close {
+  background: url("../../img/icon-cross.svg") no-repeat center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-size: 23px 22px;
+  border: none;
+  outline: none;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__link {
+  text-align: center;
+  text-transform: uppercase;
+  order: 100;
+  min-height: 55px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 55px;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+}
+
+.menu__link-item {
+  display: block;
+  color: @white;
+  white-space: nowrap;
+  background-color: @main-blue;
+
+  &:hover {
+    background-color: @main-blue-hover;
+  }
+}
