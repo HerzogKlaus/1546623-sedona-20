@@ -42,8 +42,6 @@
                   class="menu__logo"
                   src="img/logo-sedona-desktop.png"
                   alt="Седона"
-                  width="188"
-                  height="98"
                 />
               </picture>
             </a>
@@ -125,7 +123,7 @@
               />
               <img
                 class="advantage__image-item"
-                src="img/photo-city.jpg"
+                src="img/main-city-desktop@1x.jpg"
                 alt=""
                 width="800"
                 height="400"
@@ -189,11 +187,27 @@
             </p>
           </div>
           <div class="advantage__image">
-            <img
-              class="advantage__image-item"
-              src="img/photo-bridge-mobile@1x.jpg"
-              alt="Advantage image"
-            />
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="img/main-bridge-mobile@1x.jpg"
+              />
+              <source
+                media="(max-width: 1279px)"
+                srcset="img/main-bridge-tablet@1x.jpg"
+              />
+              <source
+                media="(min-width: 1280px)"
+                srcset="img/main-bridge-desktop@1x.jpg"
+              />
+              <img
+                class="advantage__image-item"
+                src="img/main-bridge-desktop@1x.jpg"
+                alt=""
+                width="800"
+                height="400"
+              />
+            </picture>
           </div>
         </div>
         <div class="advantages__gray">

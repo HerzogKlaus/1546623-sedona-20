@@ -135,7 +135,6 @@
     flex-direction: row;
 
     &--gray {
-
       &::after {
         display: none;
       }
@@ -176,5 +175,27 @@
   .advantage__icon-desc {
     padding-left: 0;
     width: 95%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .advantage--blue .advantage__text:nth-child(1) {
+    order: 1;
+  }
+  .advantage--blue .advantage__text:nth-child(2) {
+    order: 0;
+  }
+
+  .advantage__image {
+    width: 800px;
+    height: 256px;
+  }
+
+  .advantage {
+
+
+    &--gray {
+      min-height: 256px;
+    }
   }
 }
