@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+.close {
+  display: none;
+}
+
 .menu__close {
   background: url("../../img/icon-cross.svg") no-repeat center;
   position: absolute;
@@ -36,6 +40,13 @@
   line-height: 55px;
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
+
+  &--logo {
+    height: 58px;
+    z-index: 2;
+    border-top-style: none;
+    border: none;
+  }
 }
 
 .menu__link-item {
@@ -46,5 +57,53 @@
 
   &:hover {
     background-color: @main-blue-hover;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu__links {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 55px;
+  }
+
+  .menu__close {
+    display: none;
+  }
+
+  .menu__link {
+    display: block;
+    border: none;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &--logo {
+      order: 3;
+      z-index: 2;
+    }
+  }
+
+  .menu__link-item {
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+  }
+
+  .menu__link-logo {
+    display: block;
+    width: 102px;
+    height: 83px;
+    margin: 0 auto;
+  }
+
+  .menu__logo {
+    max-width: 100%;
+    height: auto;
   }
 }

@@ -25,3 +25,47 @@
 .advantages__icons {
   padding: 35px 25px;
 }
+
+.advantages__gray {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .advantages__title {
+    font-size: 21px;
+    width: 84%;
+  }
+
+  .advantages__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .advantages__icons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .advantages__icons .advantage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .advantages__icons .advantage:nth-child(3) {
+    order: 2;
+  }
+
+  .advantages__icons .advantage:nth-child(2) {
+    order: 3;
+  }
+
+  .advantages__gray {
+    flex-direction: row;
+  }
+}
