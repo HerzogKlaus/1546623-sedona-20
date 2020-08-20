@@ -7,11 +7,11 @@ document.querySelector(".menu__close").onclick = (e) => {
       return;
     }
   });
-  document.querySelector('.header__burger-menu').style.display = 'flex';
+  document.querySelector('.menu__burger-btn').style.display = 'flex';
   e.toElement.style.display = 'none';
 };
 
-document.querySelector('.header__burger-menu').onclick = (e) => {
+document.querySelector('.menu__burger-btn').onclick = (e) => {
   let menuElem = document.querySelectorAll(".menu__link");
   menuElem.forEach((elem) => {
     if (!elem.classList.contains("menu__link--logo")) {
