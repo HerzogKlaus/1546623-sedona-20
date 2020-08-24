@@ -138,6 +138,8 @@
     width: 100%;
 
     &--gray {
+      height: 256px;
+
       &::after {
         display: none;
       }
@@ -171,7 +173,7 @@
     width: 90%;
   }
 
-  .advantage--blue .advantage__text:nth-child(2) {
+  .advantage--blue-right .advantage__text {
     order: 2;
   }
 
@@ -182,6 +184,14 @@
 
   .advantage__text {
     margin: 0 auto;
+  }
+
+  .advantage:nth-child(1) {
+    order: 1;
+  }
+
+  .advantage:nth-child(4) {
+    order: 0;
   }
 }
 
