@@ -7,17 +7,6 @@
   padding-bottom: 40px;
 }
 
-.find-hotel__button {
-  background: @main-blue;
-  color: @white;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 17px 32px;
-  width: 70%;
-  font-size: 26px;
-  font-weight: bold;
-}
-
 .presentation__title {
   text-align: center;
   text-transform: uppercase;
@@ -95,4 +84,79 @@
   background: 0 0;
   border: none;
   outline: none;
+}
+
+@media (min-width: 768px) {
+  .presentation__image {
+    width: 80%;
+  }
+
+  .presentation__player {
+    width: 80%;
+    height: 93px;
+    position: relative;
+    left: 40%;
+    bottom: 93px;
+  }
+
+  .presentation__player-buttons {
+    background: none;
+    position: absolute;
+    top: 0;
+  }
+
+  .presentation__progress-bar {
+    &::before {
+      top: 48px;
+      width: 389px;
+    }
+
+    &::after {
+      bottom: 42%;
+      left: 32%;
+    }
+  }
+
+  .presentation__player-button {
+    &--replay {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &--fullscreen {
+      position: absolute;
+      top: 0;
+      left: 80%;
+    }
+
+    &--subtitles {
+      position: absolute;
+      top: 0;
+      left: 89%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .presentation__progress-bar {
+    &::before {
+      top: 48px;
+      width: 75%;
+    }
+  }
+
+  .presentation__player-button {
+    &--fullscreen {
+      position: absolute;
+      top: 0;
+      left: 93%;
+    }
+
+    &--subtitles {
+      position: absolute;
+      top: 0;
+      left: 87%;
+    }
+  }
 }
