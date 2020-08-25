@@ -33,3 +33,23 @@
   align-items: center;
   width: 100%;
 }
+
+@media (min-width: 768px) {
+  .photos__block {
+    flex-direction: row;
+    width: 648px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .photos__desc {
+    width: 74%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .photos__block {
+    width: 100%;
+  }
+}

@@ -20,10 +20,45 @@
 }
 
 .photo__title {
+  text-transform: uppercase;
   font-weight: bold;
 }
 
 .photo__likes-quantity {
   margin-left: 14px;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .photo {
+    border: none;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .photo__desc {
+    position: relative;
+    background-color: @inputs-bg;
+    width: 100%;
+    text-align: left;
+  }
+
+  .photo__likes {
+    position: absolute;
+    right: 5%;
+    top: 34%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .photo__desc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: @white;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }

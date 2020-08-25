@@ -8,37 +8,6 @@
   height: 440px;
 }
 
-.header__burger-menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 2;
-  width: 23px;
-  height: 4px;
-  background-color: @main-blue;
-  margin-top: 17px;
-  margin-right: 17px;
-  border: 0;
-
-  &::before {
-    content: " ";
-    width: 23px;
-    height: 4px;
-    background-color: @main-blue;
-    margin-top: 7px;
-  }
-
-  &::after {
-    content: " ";
-    width: 23px;
-    height: 4px;
-    background-color: @main-blue;
-    margin-top: 3px;
-  }
-}
-
 .header__logo {
   display: flex;
   flex-direction: row;
@@ -63,7 +32,27 @@
 
 .header__triangle {
   position: absolute;
-  bottom: -1px;
+  bottom: -4px;
   margin-top: 28px;
   width: 100%;
+}
+
+.header__triangle-item {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat center top / cover;
+  }
+
+  .header__title-image {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat center top;
+  }
 }
