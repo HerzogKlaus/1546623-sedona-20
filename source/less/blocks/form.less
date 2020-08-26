@@ -301,8 +301,13 @@
   }
 
   .form-fieldsets__item {
+    &::before {
+      display: none;
+    }
+
     &--impression {
       order: -1;
+      border-right: 1px solid @main-border;
     }
 
     &--contacts {
@@ -311,6 +316,8 @@
 
     &--atraction {
       width: 100%;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     &--emotion {
@@ -318,8 +325,146 @@
     }
   }
 
+  .form-fieldsets__item--atraction .form__legend {
+    flex-basis: 100%;
+
+    line-height: @main-line-height;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 1px;
+      background: @main-border;
+      left: 2%;
+      top: 18%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 1px;
+      background: @main-border;
+      right: 2%;
+      top: 18%;
+    }
+  }
+
+  .form-fieldsets__item--atraction .form__line {
+    flex-basis: 35%;
+    margin: 0 auto;
+  }
+
   .form__submit-button {
     margin-left: 36px;
     width: 45%;
+  }
+
+  .form__contact {
+    width: 100%;
+  }
+
+  .form__contact-icon {
+    height: 58px;
+  }
+
+  .form-fieldsets__item--contacts .form__legend {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 1px;
+      background: @main-border;
+      left: 2%;
+      top: 11%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 1px;
+      background: @main-border;
+      right: 2%;
+      top: 11%;
+    }
+  }
+
+  .form-fieldsets__item--emotion .form__legend {
+    line-height: @main-line-height;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 1px;
+      background: @main-border;
+      left: 2%;
+      top: 11%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 1px;
+      background: @main-border;
+      right: 2%;
+      top: 11%;
+    }
+  }
+
+  .form-fieldsets__item--impression .form__line {
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .form-fieldsets__item {
+    &--impression {
+      padding-right: 20%;
+    }
+
+    &--meet {
+      width: 48%;
+      padding-left: 10%;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .form-fieldsets__item--contacts .form__legend {
+    flex-basis: 100%;
+  }
+
+  .form-fieldsets__item--contacts .form__line {
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .form-fieldsets__item--contacts .form__line:nth-child(3) {
+    flex-basis: 52%;
+  }
+
+  .form__line-title {
+    &--phone-mark {
+      display: none;
+    }
+  }
+
+  .form-fieldsets__item--contacts .form__line-title {
+    padding-right: 6%;
+    white-space: nowrap;
+  }
+
+  .form-fieldsets__item--atraction .form__line {
+    flex-basis: 20%;
   }
 }
