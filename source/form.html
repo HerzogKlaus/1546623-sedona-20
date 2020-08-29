@@ -51,7 +51,11 @@
       </nav>
       <header class="header">
         <div class="header__title">
-          <img src="img/text-sedona.svg" alt="Sedona" />
+          <img
+            class="header__title-image"
+            src="img/text-sedona.svg"
+            alt="Sedona"
+          />
         </div>
         <picture class="header__triangle">
           <source
@@ -87,8 +91,8 @@
           <div class="form-fieldsets">
             <div class="form-fieldsets__item form-fieldsets__item--meet">
               <div class="form__legend">Представьтесь:</div>
-              <div class="form__line">
-                <label class="form__line-title" for="name">Имя:</label>
+              <div class="form__line form__line--meet">
+                <label class="form__line-title form__line-title--meet" for="name">Имя:</label>
                 <input
                   class="form__meet"
                   id="name"
@@ -98,8 +102,8 @@
                   required
                 />
               </div>
-              <div class="form__line">
-                <label class="form__line-title" for="surname">Фамилия:</label>
+              <div class="form__line form__line--meet">
+                <label class="form__line-title form__line-title--meet" for="surname">Фамилия:</label>
                 <input
                   class="form__meet"
                   id="surname"
@@ -109,8 +113,8 @@
                   required
                 />
               </div>
-              <div class="form__line">
-                <label class="form__line-title" for="middlename"
+              <div class="form__line form__line--meet">
+                <label class="form__line-title form__line-title--meet" for="middlename"
                   >Отчество:</label
                 >
                 <input
@@ -124,12 +128,13 @@
               </div>
             </div>
             <div class="form-fieldsets__item form-fieldsets__item--contacts">
-              <div class="form__legend">
+              <div class="form__legend form__legend--contacts">
                 Контактная ифнормация:
               </div>
-              <div class="form__line">
-                <label class="form__line-title" for="phone"
-                  >Контактный телефон:</label
+              <div class="form__line form__line--contacts">
+                <label class="form__line-title form__line-title--contacts" for="phone"
+                  ><span class="form__line-title form__line-title--phone-mark">Контактный</span
+                  >телефон:</label
                 >
                 <input
                   class="form__contact"
@@ -141,8 +146,8 @@
                 />
                 <div class="form__contact-icon form__contact-icon--phone"></div>
               </div>
-              <div class="form__line">
-                <label class="form__line-title" for="e-mail"
+              <div class="form__line form__line--contacts">
+                <label class="form__line-title form__line-title--contacts" for="e-mail"
                   >Электронная почта:</label
                 >
                 <input
@@ -160,7 +165,7 @@
               <div class="form__legend">
                 Ваше общее впечатление:
               </div>
-              <div class="form__line">
+              <div class="form__line form__line--impression">
                 <input
                   class="form__impression"
                   id="positive"
@@ -175,7 +180,7 @@
                   >Скорее положительное</label
                 >
               </div>
-              <div class="form__line">
+              <div class="form__line form__line--impression">
                 <input
                   class="form__impression"
                   id="negative"
@@ -189,7 +194,7 @@
                   >Скорее отрицательное</label
                 >
               </div>
-              <div class="form__line">
+              <div class="form__line form__line--impression">
                 <input
                   class="form__impression"
                   id="neutral"
@@ -205,10 +210,10 @@
               </div>
             </div>
             <div class="form-fieldsets__item form-fieldsets__item--atraction">
-              <div class="form__legend">
-                Посещенные достопримечательности:
+              <div class="form__legend form__legend--atraction">
+                Посещенные<br />достопримечательности:
               </div>
-              <div class="form__line">
+              <div class="form__line form__line--atraction">
                 <input
                   class="form__atraction"
                   id="attr1"
@@ -223,7 +228,7 @@
                   >Мост Дьявола</label
                 >
               </div>
-              <div class="form__line">
+              <div class="form__line form__line--atraction">
                 <input
                   class="form__atraction"
                   id="attr2"
@@ -238,7 +243,7 @@
                   >Гора-Колокол</label
                 >
               </div>
-              <div class="form__line">
+              <div class="form__line form__line--atraction">
                 <input
                   class="form__atraction"
                   id="attr3"
@@ -253,7 +258,7 @@
                   >Слайд-Парк</label
                 >
               </div>
-              <div class="form__line">
+              <div class="form__line form__line--atraction">
                 <input
                   class="form__atraction"
                   id="attr4"
@@ -269,10 +274,10 @@
               </div>
             </div>
             <div class="form-fieldsets__item form-fieldsets__item--emotion">
-              <div class="form__legend">
+              <div class="form__legend form__legend--emotion">
                 Опишите свои эмоции:
               </div>
-              <div class="form__line">
+              <div class="form__line form__line--emotion">
                 <textarea
                   class="form__textarea"
                   placeholder="Опишите подробно все свои восторги"

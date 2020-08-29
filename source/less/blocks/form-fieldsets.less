@@ -1,0 +1,76 @@
+.form-fieldsets__item {
+  margin-top: 20px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #e5e5e5;
+    margin-bottom: 16px;
+    top: 0;
+  }
+
+  &--emotion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-fieldsets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .form-fieldsets__item {
+    &::before {
+      display: none;
+    }
+
+    &--impression {
+      order: -1;
+      border-right: 1px solid @main-border;
+    }
+
+    &--contacts {
+      width: 100%;
+    }
+
+    &--atraction {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--emotion {
+      width: 96%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .form-fieldsets__item {
+    &--impression {
+      padding-right: 20%;
+    }
+
+    &--meet {
+      width: 48%;
+      padding-left: 10%;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
