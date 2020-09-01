@@ -54,6 +54,11 @@
   &:hover {
     background-color: @main-blue-hover;
   }
+
+  &:active {
+    background-color: @main-blue-down;
+    color: rgba(255, 255, 255, .3);
+  }
 }
 
 .menu__burger-btn {
@@ -129,6 +134,7 @@
   }
 
   .menu__link-item {
+    min-width: 150px;
     font-size: 14px;
     color: @black;
     background-color: @white;
