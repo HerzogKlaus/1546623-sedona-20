@@ -23,4 +23,3 @@ document.querySelector(".menu__burger-btn").onclick = (e) => {
   document.querySelector(".menu__close").style.display = "block";
   e.toElement.style.display = "none";
 };
-
