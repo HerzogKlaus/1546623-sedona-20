@@ -7,6 +7,10 @@
   position: relative;
   height: 440px;
   width: 100%;
+
+  &--other {
+    max-height: 214px;
+  }
 }
 
 .header__logo {
@@ -45,6 +49,10 @@
 @media (min-width: 768px) {
   .header {
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat center top / cover;
+
+    &--other {
+      max-height: 330px;
+    }
   }
 
   .header__title-image {
@@ -55,5 +63,9 @@
 @media (min-width: 1280px) {
   .header {
     background: url("../img/bg-back-desktop@1x.jpg") no-repeat center top;
+
+    &--other {
+      max-height: 350px;
+    }
   }
 }

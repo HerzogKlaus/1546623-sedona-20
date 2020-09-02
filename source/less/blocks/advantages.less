@@ -14,12 +14,15 @@
   font-style: normal;
   font-weight: bold;
   line-height: @main-line-height;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .advantages__desc {
   text-align: center;
   text-transform: uppercase;
   line-height: @main-line-height;
+  margin-top: 25px;
 }
 
 .advantages__icons {
@@ -33,6 +36,10 @@
 }
 
 @media (min-width: 768px) {
+  .advantages {
+    padding-top: 43px;
+  }
+
   .advantages__title {
     font-size: 21px;
     width: 84%;
@@ -60,6 +67,10 @@
 
   .advantages__gray {
     flex-direction: row;
+    align-items: baseline;
+    max-height: 256px;
+    background-color: @bg-gray;
+    padding-bottom: 25px;
   }
 }
 
