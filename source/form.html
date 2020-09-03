@@ -95,7 +95,7 @@
                 <label
                   class="form__line-title form__line-title--meet"
                   for="name"
-                  >Имя:</label
+                  >Имя<sup class="form__line-title form__line-title--required">*</sup>:</label
                 >
                 <input
                   class="form__meet"
@@ -110,7 +110,7 @@
                 <label
                   class="form__line-title form__line-title--meet"
                   for="surname"
-                  >Фамилия:</label
+                  >Фамилия<sup class="form__line-title form__line-title--required">*</sup>:</label
                 >
                 <input
                   class="form__meet"
@@ -146,8 +146,8 @@
                   class="form__line-title form__line-title--contacts"
                   for="phone"
                   ><span class="form__line-title form__line-title--phone-mark"
-                    >Контактный</span
-                  >телефон:</label
+                    >Контактный </span
+                  >телефон<sup class="form__line-title form__line-title--required">*</sup>:</label
                 >
                 <input
                   class="form__contact"
@@ -163,7 +163,7 @@
                 <label
                   class="form__line-title form__line-title--contacts"
                   for="e-mail"
-                  >Электронная почта:</label
+                  >Электронная почта<sup class="form__line-title form__line-title--required">*</sup>:</label
                 >
                 <input
                   class="form__contact"
@@ -304,6 +304,9 @@
             >
               Отправить отзыв
             </button>
+          </div>
+          <div class="form__submit-help">
+            * — обязательные поля
           </div>
         </form>
       </section>
