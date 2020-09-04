@@ -12,10 +12,15 @@
   padding: 17px 32px;
   font-size: 26px;
   font-weight: bold;
-  width: 60%;
+  width: 92%;
 
   &:hover {
     background-color: @main-blue-hover;
+  }
+
+  &:active {
+    background-color: @main-blue-down;
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -30,7 +35,17 @@
   text-transform: uppercase;
   line-height: @main-line-height;
   padding-bottom: 27px;
-  width: 63%;
+  width: 93%;
+}
+
+@media (min-width: 768px) {
+  .find-hotel__desc {
+    width: 60%;
+  }
+
+  .find-hotel__button {
+    width: 65%;
+  }
 }
 
 @media (min-width: 1280px) {
