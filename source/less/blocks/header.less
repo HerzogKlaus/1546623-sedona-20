@@ -8,6 +8,10 @@
   height: 440px;
   width: 100%;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/bg-back-mobile@2x.jpg") no-repeat center top / cover;
+  }
+
   &--other {
     max-height: 214px;
   }
@@ -50,6 +54,10 @@
   .header {
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat center top / cover;
 
+    @media (min-resolution: 2dppx) {
+      background: url("../img/bg-back-tablet@2x.jpg") no-repeat center top / cover;
+    }
+
     &--other {
       max-height: 330px;
     }
@@ -63,6 +71,10 @@
 @media (min-width: 1280px) {
   .header {
     background: url("../img/bg-back-desktop@1x.jpg") no-repeat center top;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/bg-back-desktop@2x.jpg") no-repeat center top / cover;
+    }
 
     &--other {
       max-height: 350px;

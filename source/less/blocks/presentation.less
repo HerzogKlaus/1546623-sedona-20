@@ -92,7 +92,7 @@
 }
 
 .presentation__player-button-icon {
-  fill: #5C6870;
+  fill: #5c6870;
 
   &:hover {
     fill: #333333;
@@ -105,7 +105,8 @@
 
 @media (min-width: 768px) {
   .presentation__image {
-    width: 80%;
+    display: flex;
+    justify-content: center;
   }
 
   .presentation__desc {
@@ -117,10 +118,10 @@
   }
 
   .presentation__player {
-    width: 80%;
+    width: 84%;
     height: 93px;
     position: relative;
-    left: 40%;
+    left: 42%;
     bottom: 93px;
   }
 
@@ -178,6 +179,18 @@
 }
 
 @media (min-width: 1280px) {
+  .presentation__player {
+    width: 100%;
+    height: 93px;
+    position: relative;
+    left: 50%;
+    bottom: 93px;
+  }
+
+  .presentation__image {
+    width: 100%;
+  }
+
   .presentation__progress-bar {
     &::before {
       top: 48px;

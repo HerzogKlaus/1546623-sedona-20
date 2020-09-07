@@ -54,13 +54,9 @@
                   media="(max-width: 1279px)"
                   srcset="img/logo-sedona-tablet.svg"
                 />
-                <source
-                  media="(min-width: 1280px)"
-                  srcset="img/logo-sedona-desktop.svg"
-                />
                 <img
                   class="menu__logo"
-                  src="img/logo-sedona-desktop.png"
+                  src="img/logo-sedona-desktop.svg"
                   alt="Седона"
                 />
               </picture>
@@ -86,13 +82,9 @@
             media="(max-width: 1279px)"
             srcset="img/bg-intro-triangle-tablet.svg"
           />
-          <source
-            media="(min-width: 1280px)"
-            srcset="img/bg-intro-triangle-desktop.svg"
-          />
           <img
             class="header__triangle-item"
-            src="img/bg-intro-triangle-desktop.png"
+            src="img/bg-intro-triangle-desktop.svg"
             alt="triangles"
           />
         </picture>
@@ -125,19 +117,16 @@
             <picture>
               <source
                 media="(max-width: 767px)"
-                srcset="img/main-city-mobile@1x.jpg"
+                srcset="img/main-city-mobile@1x.jpg 1x, img/main-city-mobile@2x.jpg 2x"
               />
               <source
                 media="(max-width: 1279px)"
-                srcset="img/main-city-tablet@1x.jpg"
-              />
-              <source
-                media="(min-width: 1280px)"
-                srcset="img/main-city-desktop@1x.jpg"
+                srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x"
               />
               <img
                 class="advantage__image-item"
                 src="img/main-city-desktop@1x.jpg"
+                srcset="img/main-city-desktop@2x.jpg 2x"
                 alt=""
                 width="800"
                 height="400"
@@ -315,19 +304,16 @@
             <picture>
               <source
                 media="(max-width: 767px)"
-                srcset="img/main-bridge-mobile@1x.jpg"
+                srcset="img/main-bridge-mobile@1x.jpg 1x, img/main-bridge-mobile@2x.jpg 2x"
               />
               <source
                 media="(max-width: 1279px)"
-                srcset="img/main-bridge-tablet@1x.jpg"
-              />
-              <source
-                media="(min-width: 1280px)"
-                srcset="img/main-bridge-desktop@1x.jpg"
+                srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x"
               />
               <img
                 class="advantage__image-item"
                 src="img/main-bridge-desktop@1x.jpg"
+                srcset="img/main-bridge-desktop@2x.jpg 2x"
                 alt=""
                 width="800"
                 height="400"
@@ -374,13 +360,25 @@
         <a href="#" class="find-hotel__button"> Найти гостиницу </a>
       </div>
       <div class="map">
-        <img
-          class="map__image"
-          src="img/bg-map-mobile@1x.jpg"
-          width="320"
-          height="350"
-          alt="Местоположение Седоны"
-        />
+        <picture class="advantage__image-item">
+          <source
+            media="(max-width: 767px)"
+            srcset="img/bg-map-mobile@1x.jpg 1x, img/bg-map-mobile@2x.jpg 2x"
+          />
+          <source
+            media="(max-width: 1279px)"
+            srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x"
+          />
+          <img
+            class="advantage__image-item"
+            src="img/bg-map-desktop@1x.jpg"
+            srcset="img/bg-map-desktop@2x.jpg 2x"
+            alt="Местоположение Седоны"
+            width="1200"
+            height="350"
+          />
+        </picture>
+
       </div>
       <footer class="footer">
         <p class="footer__hashtag">#visitsedona</p>
@@ -465,7 +463,7 @@
         </div>
         <div class="footer__copyright">
           <span class="footer__copyright-title"> Разработано </span>
-          <a class="footer__copyright-link" href="#">
+          <a class="footer__copyright-link" href="https://htmlacademy.ru">
             <svg
               version="1.1"
               id="Layer_1"
