@@ -54,13 +54,10 @@
                   media="(max-width: 1279px)"
                   srcset="img/logo-sedona-tablet.svg"
                 />
-                <source
-                  media="(min-width: 1280px)"
-                  srcset="img/logo-sedona-desktop.svg"
-                />
                 <img
                   class="menu__logo"
-                  src="img/logo-sedona-desktop.png"
+                  src="img/logo-sedona-desktop.svg"
+                  srcset="img/logo-sedona-desktop.svg"
                   alt="Седона"
                   width="188"
                   height="98"
@@ -88,13 +85,10 @@
             media="(max-width: 1279px)"
             srcset="img/bg-intro-triangle-tablet.svg"
           />
-          <source
-            media="(min-width: 1280px)"
-            srcset="img/bg-intro-triangle-desktop.svg"
-          />
           <img
             class="header__triangle-item"
-            src="img/bg-intro-triangle-desktop.png"
+            src="img/bg-intro-triangle-desktop.svg"
+            srcset="img/bg-intro-triangle-desktop.svg"
             alt="triangles"
           />
         </picture>
@@ -113,19 +107,22 @@
               <picture>
                 <source
                   media="(max-width: 767px)"
-                  srcset="img/photo-sunset-mobile@1x.jpg"
+                  srcset="
+                    img/photo-sunset-mobile@1x.jpg 1x,
+                    img/photo-sunset-mobile@2x.jpg 2x
+                  "
                 />
                 <source
                   media="(max-width: 1279px)"
-                  srcset="img/photo-sunset-tablet@1x.jpg"
-                />
-                <source
-                  media="(min-width: 1280px)"
-                  srcset="img/photo-sunset-desktop@1x.jpg"
+                  srcset="
+                    img/photo-sunset-tablet@1x.jpg 1x,
+                    img/photo-sunset-tablet@2x.jpg 2x
+                  "
                 />
                 <img
                   class="photo__link-image"
                   src="img/photo-sunset-desktop@1x.jpg"
+                  srcset="img/photo-sunset-desktop@2x.jpg 2x"
                 />
               </picture>
             </a>
@@ -174,19 +171,22 @@
               <picture>
                 <source
                   media="(max-width: 767px)"
-                  srcset="img/photo-cactus-mobile@1x.jpg"
+                  srcset="
+                    img/photo-cactus-mobile@1x.jpg,
+                    img/photo-cactus-mobile@2x.jpg 2x
+                  "
                 />
                 <source
                   media="(max-width: 1279px)"
-                  srcset="img/photo-cactus-tablet@1x.jpg"
-                />
-                <source
-                  media="(min-width: 1280px)"
-                  srcset="img/photo-cactus-desktop@1x.jpg"
+                  srcset="
+                    img/photo-cactus-tablet@1x.jpg,
+                    img/photo-cactus-tablet@2x.jpg 2x
+                  "
                 />
                 <img
                   class="photo__link-image"
                   src="img/photo-cactus-desktop@1x.jpg"
+                  srcset="img/photo-cactus-desktop@2x.jpg 2x"
                 />
               </picture>
             </a>
@@ -235,19 +235,22 @@
               <picture>
                 <source
                   media="(max-width: 767px)"
-                  srcset="img/photo-roads-mobile@1x.jpg"
+                  srcset="
+                    img/photo-roads-mobile@1x.jpg 1x,
+                    img/photo-roads-mobile@2x.jpg 2x
+                  "
                 />
                 <source
                   media="(max-width: 1279px)"
-                  srcset="img/photo-roads-tablet@1x.jpg"
-                />
-                <source
-                  media="(min-width: 1280px)"
-                  srcset="img/photo-roads-desktop@1x.jpg"
+                  srcset="
+                    img/photo-roads-tablet@1x.jpg 1x,
+                    img/photo-roads-tablet@2x.jpg 2x
+                  "
                 />
                 <img
                   class="photo__link-image"
                   src="img/photo-roads-desktop@1x.jpg"
+                  srcset="img/photo-roads-desktop@2x.jpg 2x"
                 />
               </picture>
             </a>
@@ -296,19 +299,22 @@
               <picture>
                 <source
                   media="(max-width: 767px)"
-                  srcset="img/photo-bridge-mobile@1x.jpg"
+                  srcset="
+                    img/photo-bridge-mobile@1x.jpg 1x,
+                    img/photo-bridge-mobile@2x.jpg 2x
+                  "
                 />
                 <source
                   media="(max-width: 1279px)"
-                  srcset="img/photo-bridge-tablet@1x.jpg"
-                />
-                <source
-                  media="(min-width: 1280px)"
-                  srcset="img/photo-bridge-desktop@1x.jpg"
+                  srcset="
+                    img/photo-bridge-tablet@1x.jpg 1x,
+                    img/photo-bridge-tablet@2x.jpg 2x
+                  "
                 />
                 <img
                   class="photo__link-image"
                   src="img/photo-bridge-desktop@1x.jpg"
+                  srcset="img/photo-bridge-desktop@2x.jpg 2x"
                 />
               </picture>
             </a>
@@ -360,11 +366,21 @@
           Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали
           в очередной раз!
         </p>
-        <img
-          class="presentation__image"
-          src="img/video-mobile@1x.jpg"
-          alt="video"
-        />
+        <picture class="presentation__image">
+          <source
+            media="(max-width: 767px)"
+            srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x"
+          />
+          <source
+            media="(max-width: 1279px)"
+            srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x"
+          />
+          <img
+            src="img/video-desktop@1x.jpg"
+            srcset="img/video-desktop@2x.jpg 2x"
+            alt="video"
+          />
+        </picture>
         <div class="presentation__player">
           <div class="presentation__progress-bar"></div>
           <ul class="presentation__player-buttons">
@@ -436,15 +452,9 @@
                   xml:space="preserve"
                 >
                   <g class="presentation__player-button-icon">
-                    <polygon
-                      points="0,0 0,3 0,6 3,6 3,3 6,3 6,0 3,0"
-                    />
-                    <polygon
-                      points="3,14 0,14 0,17 0,20 3,20 6,20 6,17 3,17"
-                    />
-                    <polygon
-                      points="17,0 14,0 14,3 17,3 17,6 20,6 20,3 20,0"
-                    />
+                    <polygon points="0,0 0,3 0,6 3,6 3,3 6,3 6,0 3,0" />
+                    <polygon points="3,14 0,14 0,17 0,20 3,20 6,20 6,17 3,17" />
+                    <polygon points="17,0 14,0 14,3 17,3 17,6 20,6 20,3 20,0" />
                     <polygon
                       points="17,17 14,17 14,20 17,20 20,20 20,17 20,14 17,14"
                     />
@@ -538,7 +548,7 @@
         </div>
         <div class="footer__copyright">
           <span class="footer__copyright-title"> Разработано </span>
-          <a class="footer__copyright-link" href="#">
+          <a class="footer__copyright-link" href="https://htmlacademy.ru">
             <svg
               version="1.1"
               id="Layer_1"
