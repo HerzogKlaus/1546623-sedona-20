@@ -6,16 +6,27 @@
 }
 
 .menu__close {
-  background: url("../../img/icon-cross.svg") no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
-  display: block;
   width: 60px;
   height: 60px;
   background-size: 23px 22px;
   border: none;
   outline: none;
+}
+
+.menu__close-image {
+  &:hover {
+    fill: #cde1ed;
+  }
+
+  &:active {
+    fill: #a7cae0;
+  }
 }
 
 .menu__links {
@@ -92,6 +103,22 @@
 
   &--closed {
     display: none;
+  }
+
+  &:hover {
+    background-color: #b3d1e4;
+
+    &::before, &::after {
+      background-color: #b3d1e4;
+    }
+  }
+
+  &:active {
+    background-color: #d9e8f2;
+
+    &::before, &::after {
+      background-color: #d9e8f2;
+    }
   }
 }
 

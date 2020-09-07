@@ -8,7 +8,7 @@ document.querySelector(".menu__close").onclick = (e) => {
     }
   });
   document.querySelector(".menu__burger-btn").style.display = "flex";
-  e.toElement.style.display = "none";
+
 };
 
 document.querySelector(".menu__burger-btn").onclick = (e) => {
@@ -20,6 +20,6 @@ document.querySelector(".menu__burger-btn").onclick = (e) => {
       return;
     }
   });
-  document.querySelector(".menu__close").style.display = "block";
+  document.querySelector(".menu__close").style.display = "flex";
   e.toElement.style.display = "none";
 };

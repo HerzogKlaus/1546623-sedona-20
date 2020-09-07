@@ -42,6 +42,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    padding-top: 20px;
   }
 
   &--contacts {
@@ -63,6 +64,10 @@
   text-align-last: left;
   text-transform: uppercase;
 
+  &--required {
+    display: none;
+  }
+
   &--meet {
     padding-right: 30px;
   }
@@ -79,6 +84,7 @@
     position: relative;
     font-weight: bold;
     font-size: @main-font-size;
+    text-transform: capitalize;
 
     &::before {
       content: "";
@@ -96,6 +102,10 @@
     &:hover::before {
       background-color: #e5e5e5;
     }
+
+    &:active::before {
+      background-color: #d5d5d5;
+    }
   }
 
   &--check {
@@ -103,6 +113,8 @@
     flex-direction: row;
     align-items: center;
     font-weight: bold;
+    text-transform: capitalize;
+    font-size: @main-font-size;
 
     &::before {
       content: "";
@@ -119,6 +131,10 @@
 
     &:hover::before {
       background-color: #e5e5e5;
+    }
+
+    &:active::before {
+      background-color: #d5d5d5;
     }
   }
 }
@@ -185,11 +201,12 @@
 
 .form__textarea {
   background: @inputs-bg;
-  text-indent: 22px;
+  padding-left: 22px;
   padding-top: 13px;
   width: 100%;
   min-height: 160px;
   font-weight: bold;
+  line-height: @main-line-height;
   outline: none;
   border: none;
 
@@ -246,6 +263,7 @@
   border: 0;
   margin: 0 auto;
   margin-top: 50px;
+  white-space: nowrap;
   outline: none;
   cursor: pointer;
 
@@ -254,10 +272,26 @@
   }
 }
 
+.form__submit-help  {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .form__submit-button {
-    margin-left: 36px;
+    margin-left: 49px;
     width: 45%;
+  }
+
+  .form__submit-help {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -31px;
+    padding-right: 6%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    line-height: @main-line-height;
+    text-transform: uppercase;
   }
 
   .form__contact {
@@ -268,7 +302,14 @@
     height: 58px;
   }
 
+  .form__desc {
+    width: 66%;
+    padding-bottom: 63px;
+  }
+
   .form__legend {
+    padding-bottom: 54px;
+
     &--contacts {
       flex-basis: 100%;
 
@@ -346,8 +387,9 @@
 
   .form__line {
     &--atraction {
-      flex-basis: 20%;
+      flex-basis: 37%;
       margin: 0 auto;
+      margin-right: 0;
     }
 
     &--impression {
@@ -357,7 +399,7 @@
     &--contacts {
       flex-basis: 45%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: baseline;
 
       &:nth-child(3) {
@@ -367,9 +409,35 @@
   }
 
   .form__line-title {
+    &--required {
+      display: inline;
+    }
+
     &--contacts {
       padding-right: 3%;
       white-space: nowrap;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .form__submit-button {
+    margin-left: 58px;
+  }
+
+  .form__line {
+    &--contacts {
+      flex-direction: row;
+    }
+
+    &--atraction {
+      flex-basis: 22%;
+    }
+  }
+
+  .form__line-title {
+    &--required {
+      display: inline;
     }
 
     &--phone-mark {
