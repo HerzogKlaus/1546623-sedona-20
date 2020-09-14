@@ -11,6 +11,8 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
 
 // clean
 
@@ -35,10 +37,21 @@ exports.copy = copy;
 // HTML copy
 
 const html = () => {
-  return gulp.src("source/*.html").pipe(gulp.dest("build"));
+  return gulp
+    .src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
 };
 
 exports.html = html;
+
+// JS mini and copy
+
+const jsmin = () => {
+  return gulp.src("source/js/*.js").pipe(terser()).pipe(gulp.dest("build/js"));
+};
+
+exports.jsmin = jsmin;
 
 // Styles
 
@@ -72,7 +85,7 @@ const images = () => {
       ])
     )
     .pipe(gulp.dest("build/img"))
-    .pipe(sync.stream({once: true}));
+    .pipe(sync.stream({ once: true }));
 };
 
 exports.images = images;
@@ -98,7 +111,7 @@ const sprite = () => {
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
-    .pipe(sync.stream({once: true}));
+    .pipe(sync.stream({ once: true }));
 };
 
 exports.sprite = sprite;
@@ -124,28 +137,29 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/**/*.js", gulp.series("jsmin"));
+  gulp.watch(["source/img/**/*.{jpg,png,svg,webp}"], gulp.series("images"));
   gulp.watch(
-    ["source/img/**/*.{jpg,png,svg,webp}"],
-    gulp.series("images")
-  );
-  gulp.watch(
-    ["source/fonts/**/*.{woff,woff2}", "source/js/**/*.js", "source/*.ico"],
+    ["source/fonts/**/*.{woff,woff2}", "source/*.ico"],
     gulp.series("copy")
   );
-  gulp.watch("source/img/**/icon-*.svg", gulp.series("sprite"));
-  gulp.watch([
-    "source/*.html",
-    "source/fonts/**/*.{woff,woff2}",
-    "source/js/**/*.js"
-]).on("change", sync.reload);
+  gulp.watch("source/img/**/icon-*.svg", gulp.series("styles", "sprite"));
+  gulp
+    .watch([
+      "source/*.html",
+      "source/fonts/**/*.{woff,woff2}",
+      "source/js/**/*.js",
+    ])
+    .on("change", sync.reload);
 };
 
-exports.build = gulp.series(clean, copy, html, images, sprite, styles);
+exports.build = gulp.series(clean, copy, html, jsmin, images, sprite, styles);
 
 exports.default = gulp.series(
   clean,
   copy,
   html,
+  jsmin,
   images,
   sprite,
   styles,
