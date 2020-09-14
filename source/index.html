@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Седона</title>
-    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link
+      rel="preload"
+      href="fonts/ptsans.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsansbold.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="wrapper">
       <nav class="menu menu--opened">
-        <span class="menu__close">
-          <svg width="22" height="22">
-            <use xlink:href="img/sprite.svg#icon-cross"></use>
-          </svg>
+        <span class="menu__btn menu__close">
         </span>
         <ul class="menu__links">
           <li class="menu__link menu__link--active">
@@ -47,7 +54,6 @@
                 />
               </picture>
             </a>
-            <span class="menu__burger-btn menu__burger-btn--closed"></span>
           </li>
         </ul>
       </nav>
@@ -272,39 +278,59 @@
           Укажите предполагаемые даты поездки, и мы покажем Вам лучшие
           предложения гостиниц в Седоне.
         </p>
-        <a href="#" class="find-hotel__button"> Найти гостиницу </a>
+        <a href="form.html" class="find-hotel__button"> Найти гостиницу </a>
       </div>
       <div class="map">
-        <picture class="advantage__image-item">
-          <source
-            media="(max-width: 767px)"
-            srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x"
-          />
-          <source
-            media="(max-width: 1279px)"
-            srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x"
-          />
-          <source
-            type="image/webp"
-            srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop2x.webp 2x"
-          />
-          <source
-            media="(max-width: 767px)"
-            srcset="img/bg-map-mobile@1x.jpg 1x, img/bg-map-mobile@2x.jpg 2x"
-          />
-          <source
-            media="(max-width: 1279px)"
-            srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x"
-          />
-          <img
-            class="advantage__image-item"
-            src="img/bg-map-desktop@1x.jpg"
-            srcset="img/bg-map-desktop@2x.jpg 2x"
-            alt="Местоположение Седоны"
-            width="1200"
+        <figure class="map__wrapper">
+          <iframe
+            class="map__google-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591464.6227566833!2d-111.8436728057483!3d35.02143925839546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1598266844438!5m2!1sru!2sru"
+            width="100"
             height="350"
-          />
-        </picture>
+            tabindex="0"
+            allowfullscreen
+            title="Седона, Аризона 86336, США"
+          ></iframe>
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                img/bg-map-mobile@1x.webp 1x,
+                img/bg-map-mobile@2x.webp 2x
+              "
+            />
+            <source
+              media="(max-width: 1279px)"
+              srcset="
+                img/bg-map-tablet@1x.webp 1x,
+                img/bg-map-tablet@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              srcset="
+                img/bg-map-desktop@1x.webp 1x,
+                img/bg-map-desktop2x.webp  2x
+              "
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="img/bg-map-mobile@1x.jpg 1x, img/bg-map-mobile@2x.jpg 2x"
+            />
+            <source
+              media="(max-width: 1279px)"
+              srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x"
+            />
+            <img
+              class="map__image"
+              src="img/bg-map-desktop@1x.jpg"
+              srcset="img/bg-map-desktop@2x.jpg 2x"
+              alt="Местоположение Седоны"
+              width="1200"
+              height="350"
+            />
+          </picture>
+        </figure>
       </div>
       <footer class="footer">
         <p class="footer__hashtag">#visitsedona</p>
@@ -335,7 +361,7 @@
         </div>
         <div class="footer__copyright">
           <span class="footer__copyright-title"> Разработано </span>
-          <a class="footer__copyright-link" href="https://htmlacademy.ru">
+          <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="footer__academy-logo" width="27" height="34">
               <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
