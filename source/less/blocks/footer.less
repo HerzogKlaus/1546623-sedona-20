@@ -8,13 +8,15 @@
 }
 
 .footer__copyright-title {
-  margin-right: 6px;
+  margin-right: 9px;
+  font-size: 14px;
 }
 
 .footer__hashtag {
   font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
+  margin-top: 0;
 }
 
 .footer__copyright {
@@ -22,7 +24,7 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  padding-top: 15px;
+  padding-top: 23px;
   padding-bottom: 26px;
 }
 
@@ -40,10 +42,21 @@
   .footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 110px 69px 36px 65px;
+    padding: 32px 59px 36px 59px;
+  }
+
+  .footer__hashtag {
+    margin-top: 15px;
   }
 
   .footer__copyright {
     padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    padding: 26px 119px 28px 119px;
   }
 }
