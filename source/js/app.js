@@ -13,7 +13,6 @@ btn.addEventListener("click", (e) => {
       }
     });
   } else if(e.target.classList.contains("menu__burger-btn")) {
-    console.log('111');
     e.target.classList.add("menu__close");
     e.target.classList.remove("menu__burger-btn");
     menuElem.forEach((elem) => {
