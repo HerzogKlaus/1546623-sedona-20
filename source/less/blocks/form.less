@@ -54,6 +54,10 @@
     flex-direction: column;
   }
 
+  &--atraction {
+    padding-left: 6px;
+  }
+
   &--emotion {
     width: 100%;
     display: flex;
@@ -73,12 +77,13 @@
   }
 
   &--meet {
-    padding-right: 30px;
+    padding-right: 24px;
   }
 
   &--contacts {
     margin-left: 20px;
     margin-bottom: 5px;
+    padding-bottom: 7px;
   }
 
   &--toggle {
@@ -88,7 +93,8 @@
     position: relative;
     font-weight: bold;
     font-size: @main-font-size;
-    text-transform: capitalize;
+    text-transform: inherit;
+    padding-left: 5px;
 
     &::before {
       content: "";
@@ -119,6 +125,7 @@
     font-weight: bold;
     text-transform: capitalize;
     font-size: @main-font-size;
+    padding-bottom: 14px;
 
     &::before {
       content: "";
@@ -150,6 +157,31 @@
   font-weight: bold;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  &--meet {
+    padding-top: 39px;
+    padding-bottom: 5px;
+  }
+
+  &--contacts {
+    padding-top: 62px;
+    padding-bottom: 5px;
+  }
+
+  &--impression {
+    padding-top: 67px;
+    padding-bottom: 11px;
+  }
+
+  &--atraction {
+    line-height: @main-line-height;
+    padding-top: 63px;
+    padding-bottom: 8px;
+  }
+
+  &--emotion {
+    padding-top: 54px;
+  }
 }
 
 .form__atraction {
@@ -190,7 +222,8 @@
   background: @inputs-bg;
   border: 0;
   outline: 0;
-  text-indent: 22px;
+  text-indent: 18px;
+  font-size: @main-font-size;
 }
 
 .form__contact {
@@ -200,7 +233,8 @@
   background: @inputs-bg;
   border: 0;
   outline: 0;
-  text-indent: 22px;
+  text-indent: 18px;
+  font-size: @main-font-size;
 }
 
 .form__textarea {
@@ -213,6 +247,7 @@
   line-height: @main-line-height;
   outline: none;
   border: none;
+  font-size: 18px;
 
   &:hover {
     background-color: #e5e5e5;
@@ -255,14 +290,14 @@
 
 .form__submit-button {
   display: flex;
-  width: 90%;
+  width: 88%;
   justify-content: center;
   background: #81b3d2;
   color: @white;
   text-align: center;
   text-transform: uppercase;
   padding: 17px 32px;
-  font-size: 26px;
+  font-size: 21px;
   font-weight: bold;
   border: 0;
   margin: 0 auto;
@@ -281,111 +316,137 @@
 }
 
 @media (min-width: 768px) {
+  .form__textarea {
+    width: 92%;
+    margin-left: 34px;
+  }
+
+  .form__header {
+    padding-top: 32px;
+  }
+
+  .form__title {
+    margin-bottom: 14px;
+    font-size: 30px;
+  }
+
   .form__submit-button {
-    margin-left: 49px;
-    width: 45%;
+    margin-left: 59px;
+    width: 42%;
+    margin-top: 59px;
   }
 
   .form__submit-help {
     display: flex;
     justify-content: flex-end;
-    margin-top: -31px;
-    padding-right: 6%;
     font-size: 14px;
     font-weight: 400;
     color: #333333;
     line-height: @main-line-height;
     text-transform: uppercase;
+    margin-top: -40px;
+    padding-right: 8%;
   }
 
   .form__contact {
-    width: 100%;
+    width: 83%;
+    margin: 0 auto;
   }
 
   .form__contact-icon {
     height: 58px;
+    right: 3%;
   }
 
   .form__desc {
-    width: 66%;
+    width: 57%;
     padding-bottom: 63px;
   }
 
   .form__legend {
     padding-bottom: 54px;
+    font-size: 21px;
 
     &--contacts {
       flex-basis: 100%;
+      padding-top: 103px;
+      padding-left: 32px;
 
       &::before {
         content: "";
         position: absolute;
-        width: 25%;
+        width: 17%;
         height: 1px;
-        background: @main-border;
-        left: 2%;
-        top: 11%;
+        background: #dbdbdb;
+        left: 7%;
+        top: 27%;
       }
 
       &::after {
         content: "";
         position: absolute;
-        width: 25%;
+        width: 17%;
         height: 1px;
-        background: @main-border;
-        right: 2%;
-        top: 11%;
+        background: #dbdbdb;
+        right: 7%;
+        top: 27%;
       }
     }
 
     &--atraction {
       flex-basis: 100%;
-
+      margin-left: 36px;
       line-height: @main-line-height;
 
       &::before {
         content: "";
         position: absolute;
-        width: 25%;
+        width: 17%;
         height: 1px;
-        background: @main-border;
-        left: 2%;
-        top: 18%;
+        background: #dbdbdb;
+        left: 7%;
+        top: 22%;
       }
 
       &::after {
         content: "";
         position: absolute;
-        width: 25%;
+        width: 17%;
         height: 1px;
-        background: @main-border;
-        right: 2%;
-        top: 18%;
+        background: #dbdbdb;
+        right: 7%;
+        top: 22%;
       }
     }
 
     &--emotion {
+      padding-top: 97px;
+      margin-left: 33px;
       line-height: @main-line-height;
 
       &::before {
         content: "";
         position: absolute;
-        width: 25%;
+        width: 17%;
         height: 1px;
-        background: @main-border;
-        left: 2%;
-        top: 11%;
+        background: #dbdbdb;
+        left: 6%;
+        top: 32%;
       }
 
       &::after {
         content: "";
         position: absolute;
-        width: 25%;
+        width: 17%;
         height: 1px;
-        background: @main-border;
-        right: 2%;
-        top: 11%;
+        background: #dbdbdb;
+        right: 6%;
+        top: 32%;
       }
+    }
+
+    &--atraction {
+      padding-top: 40px;
     }
   }
 
@@ -405,6 +466,8 @@
       display: flex;
       flex-direction: column;
       align-items: baseline;
+      margin-bottom: 62px;
+      margin-top: -49px;
 
       &:nth-child(3) {
         flex-basis: 52%;
@@ -412,21 +475,56 @@
     }
   }
 
+  .form__impression:checked + .form__line-title--toggle::before {
+    margin-right: 24px;
+  }
+
   .form__line-title {
     &--required {
       display: inline;
     }
 
+    &--toggle {
+      padding-top: 11px;
+
+      &::before {
+        margin-right: 24px;
+      }
+    }
+
     &--contacts {
       padding-right: 3%;
+      margin-left: 80px;
       white-space: nowrap;
     }
   }
 }
 
 @media (min-width: 1200px) {
-  .form__submit-button {
-    margin-left: 58px;
+  .form__submit-help {
+    padding-right: 10%;
+  }
+
+  .form__header {
+    padding-top: 86px;
+  }
+
+  .form__desc {
+    width: 53%;
+  }
+
+  .form__legend {
+    &--contacts {
+      padding-top: 71px;
+    }
+
+    &--atraction {
+      padding-top: 109px;
+    }
+
+    &--emotion {
+      padding-top: 88px;
+    }
   }
 
   .form__line {
@@ -447,5 +545,16 @@
     &--phone-mark {
       display: none;
     }
+  }
+
+  .form__textarea {
+    width: 86%;
+    margin-left: 42px;
+  }
+
+  .form__submit-button {
+    margin-left: 121px;
+    width: 40%;
+    margin-top: 59px;
   }
 }
